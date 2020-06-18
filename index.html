@@ -85,21 +85,31 @@
         <li class="items"><a class="item" href="#setting">Setting</a></li>
       </ul>
       <div class="search">
-        <input class="search__input" type="search" name="" placeholder="Search Report">
+        <input class="search__input" type="search" name="" placeholder="&nbsp; Search Report">
         <i class="fas fa-search"></i>
       </div>
     </div>
     <!---------------END HEADER---------------->
 
     <!--------------------MAIN--------------->
-    <div class="main p-layout">
-      <!-- <nav class="main__navigation">
-        <a class ="nav__link active" href="#overview">Overview</a>
-        <a class ="nav__link" href="#products">Products</a>
-        <a class ="nav__link" href="#shipping">Shipping</a>
-        <a class ="nav__link" href="#payment">Payment</a>
-      </nav> -->
-      CONTENT
+    <div class="content">
+
+      <div class="navbar-responsive">
+          <label id="non-display" for="toggle-main">
+            <i class="fas fa-bars"></i>
+          </label>
+          <input type="checkbox" id="toggle-main">
+          <nav class="main__navigation">
+              <a class ="nav__link active" href="#overview">Overview</a>
+              <a class ="nav__link" href="#products">Products</a>
+              <a class ="nav__link" href="#shipping">Shipping</a>
+              <a class ="nav__link" href="#payment">Payment</a>
+        </nav>
+      </div>
+      <main class="main p-layout">
+        CONTENT
+      </main>
+     
     </div>
   </div>
   <!----------END MAIN--------------->

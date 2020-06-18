@@ -74,6 +74,7 @@ ul{
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all ease-in 1s;
 }
 .user__profile{
   display: flex;
@@ -81,31 +82,6 @@ ul{
   padding: 10px;
   transition: all ease-in-out 1s;
 }
-
-@media screen and (max-width: 320px) {
-  .img_profile{
-    width: 33px;
-    height: 33px;
-  }
-  .grid-container{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-    "Header"
-    "Navbar"
-    "main";
-  }
-}
-@media screen and (max-width: 675px) {
-  .user__profile{
-    flex-direction: column;
-    text-align: center;
-  }
-  .text__profile{
-    display: none;
-  }
-}
-
 .img_profile{
   width: 50px;
   height: 50px;
@@ -123,8 +99,99 @@ ul{
   text-overflow: clip;
 }
 
-@media screen and (max-width: 375px) {
+
+.card{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width:90%;
 }
+.card-content{
+  display:flex;
+  border-radius: 14px;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  height:50px;
+  width:100%;
+}
+
+
+.bg-card-one{
+  background-color:#AACFF1;
+}
+.bg-card-two{
+  background-color: #FF9F89;
+}
+.bg-card-three{
+  background-color: #FF7657;
+}
+.box-icon{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.box-icon i{
+  color: var(--primary);
+  font-size: 1.5em;
+}
+#less{
+  color: var(--primary);
+  font-weight: bolder;
+  font-size: 1.5em;
+  transform: rotate(180deg);
+}
+.text__card{
+  color: var(--gray);
+  line-height: 6px;
+}
+.text__card:first-child{
+  font-size: 1em;
+  text-justify: auto;
+}
+.text__card p:nth-last-child(1){
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #6C6C6C;
+}
+
+
+@media screen and (max-width: 576px) {
+  .img_profile{
+    width: 33px;
+    height: 33px;
+    margin-bottom: 40px;
+  }
+  .grid-container{
+    grid-template-columns: 10vh 1fr;
+}
+  .text__profile{
+    display: none;
+  }
+  .card-content{
+    background-color: var(--primary);
+  }
+  #less{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .user__profile{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .text__card{
+    display:none;
+  }
+}
+
+
 @media screen and (max-width: 675px) {
   .text__profile{
     margin:0;
@@ -134,6 +201,8 @@ ul{
     height: 50px;
   }
 }
+/************END NAVBAR***************/
+
 
 /************HEADER***************/
 .header {
@@ -145,8 +214,6 @@ ul{
   transition: all ease-in-out 3s;
 }
 .header__menu{
-  max-width: 768px;
-  width: 100%;
   display:flex;
   justify-content: flex-end;
   position: relative;
@@ -191,6 +258,7 @@ ul{
   position: relative;
   color:var(--gray)
 }
+
 @media screen and (max-width: 375px) {
 
 }
@@ -214,10 +282,6 @@ ul{
     text-align: center;
     justify-content: center;
   }
-  body{
-    background-color: red;
-  }
-
 }
 
 /************MAIN***************/

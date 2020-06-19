@@ -234,7 +234,7 @@ ul{
   color: var(--gray)
 }
 .active{
-  color: #000000;
+  color: #000000 !important;
 }
 .search{
   position:relative;
@@ -242,12 +242,13 @@ ul{
   align-items: center;
   transition: all ease-out 1s;
   min-width: 200px;
+  padding-right: 15px;
 }
 .search i{
   position: absolute;
   right:0;
   font-size: 1.5em;
-  padding: 0 20px 0 0;
+  padding: 0 27px 0 0;
   color: var(--gray)
 }
 
@@ -293,11 +294,32 @@ ul{
 /************MAIN***************/
 .content {
   grid-area: main;
+  position: relative;
   overflow-y: scroll;
 }
+.content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 .1rem var(--bg-secondary); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.content::-webkit-scrollbar-thumb {
+  background: var(--gray); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--primary); 
+}
+
 .navbar-responsive{
   display:flex;
-  margin: 2em;
+  margin: 1.5em;
 }
 #non-display{
   display: none;
@@ -338,6 +360,19 @@ ul{
     font-size: 1.5em;
   }
 }
+
+@media screen and (min-width:768px){
+  .navbar-responsive{
+    position:sticky;
+    top:0;
+    background-color: var(--bg-primary);
+  }
+}
 .main{
   margin-top:20px;
+}
+
+.box{
+  height: 400px;
+  background-color: red;
 }
